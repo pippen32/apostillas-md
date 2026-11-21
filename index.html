@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Apostillas MD — Sin Viaje a Annapolis. Gestión de apostillas ante el Secretary of State de Maryland. Consultoría Omar Cruz, Hyattsville MD. $125 el primer documento, $60 cada adicional." />
+<link rel="icon" href="data:," />
+<title>Apostillas MD — Sin Viaje a Annapolis | Consultoría Omar Cruz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#f6efdd;
+    --paper-2:#efe4c9;
+    --card:#fbf6e9;
+    --ink:#1e3a2f;
+    --ink-soft:#3d554a;
+    --ink-faint:#5d7268;
+    --gold:#a87f1f;
+    --gold-bright:#c79a2e;
+    --gold-soft:#e9d9a8;
+    --line:#cdbd8f;
+    --line-soft:#ddd0ab;
+    --accent-bg:#1e3a2f;
+    --accent-ink:#f6efdd;
+    --warn-bg:#f3e8c8;
+    --field:#fffdf6;
+    --shadow:0 10px 30px rgba(30,58,47,.12);
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#14231d;
+      --paper-2:#0f1c17;
+      --card:#1b2f27;
+      --ink:#efe6cd;
+      --ink-soft:#cfc7ab;
+      --ink-faint:#a89f83;
+      --gold:#d9b45c;
+      --gold-bright:#e5c46e;
+      --gold-soft:#4a3f22;
+      --line:#4c5a3c;
+      --line-soft:#37473d;
+      --accent-bg:#d9b45c;
+      --accent-ink:#14231d;
+      --warn-bg:#2c2a1c;
+      --field:#0f1c17;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 500px at 85% -5%, rgba(199,154,46,.14), transparent 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size:1.0625rem;
+    line-height:1.6;
+  }
+  h1,h2,h3,.serif{font-family:"Playfair Display", Georgia, "Times New Roman", serif}
+  a{color:var(--gold)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  section{padding:52px 0 8px}
+  .kicker{
+    font-family:"Source Sans 3",sans-serif;
+    font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold);margin:0 0 10px;
+  }
+  h2{font-size:clamp(1.65rem,4.5vw,2.3rem);line-height:1.15;margin:0 0 14px;font-weight:800}
+  h3{font-size:1.2rem;margin:0 0 8px;font-weight:700}
+  p{margin:0 0 14px}
+  .lede{color:var(--ink-soft);max-width:62ch}
+  button,[role="button"],select,summary,input:not([type="checkbox"],[type="radio"]){min-height:2.25rem}
+
+  /* ---------- Header / hero ---------- */
+  header.hero{
+    padding:44px 0 40px;
+    border-bottom:3px double var(--line);
+    background:
+      linear-gradient(var(--paper), var(--paper)) padding-box;
+  }
+  .hero-top{display:flex;align-items:center;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+  .shield{flex:0 0 auto}
+  .brandline{font-family:"Source Serif 4",Georgia,serif;font-size:1.05rem}
+  .brandline strong{display:block;font-size:1.2rem;letter-spacing:.01em}
+  .brandline span{color:var(--ink-faint);font-size:.95rem}
+  .hero h1{font-size:clamp(2.1rem,6.5vw,3.4rem);line-height:1.08;font-weight:800;margin:0 0 16px;max-width:20ch}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero .bajada{font-size:1.13rem;color:var(--ink-soft);max-width:64ch;margin-bottom:22px}
+  .hero-grid{display:grid;gap:22px}
+  @media(min-width:820px){.hero-grid{grid-template-columns:1.5fr 1fr;align-items:start}}
+  .price-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:22px 22px 18px;position:relative;overflow:hidden;
+  }
+  .price-card::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:linear-gradient(90deg,var(--gold),var(--gold-bright),var(--gold))}
+  .price-card .pc-label{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:4px 0 10px}
+  .price-big{font-family:"Playfair Display",serif;font-size:2.5rem;font-weight:800;line-height:1}
+  .price-big small{font-size:1rem;font-family:"Source Sans 3",sans-serif;font-weight:600;color:var(--ink-soft)}
+  .price-plus{font-size:1.05rem;margin-top:8px;color:var(--ink-soft)}
+  .price-plus strong{color:var(--ink);font-size:1.25rem}
+  .price-note{font-size:.92rem;color:var(--ink-faint);margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    min-height:48px;padding:12px 22px;border-radius:10px;border:1px solid transparent;
+    font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;font-family:inherit;
+  }
+  .btn-primary{background:var(--accent-bg);color:var(--accent-ink)}
+  .btn-primary:hover{filter:brightness(1.08)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .phone-big{font-family:"Playfair Display",serif;font-size:1.5rem;font-weight:700;color:var(--ink);text-decoration:none}
+  .phone-big:hover{color:var(--gold)}
+
+  /* mini route strip in hero */
+  .route-strip{display:flex;align-items:flex-start;gap:0;margin:30px 0 4px;overflow:visible}
+  .rs-step{flex:1;text-align:center;position:relative;padding:0 2px}
+  .rs-step::before{content:"";position:absolute;top:15px;left:-50%;width:100%;border-top:2px dashed var(--line);z-index:0}
+  .rs-step:first-child::before{display:none}
+  .rs-dot{
+    position:relative;z-index:1;width:31px;height:31px;margin:0 auto 6px;border-radius:50%;
+    background:var(--card);border:2px solid var(--gold);color:var(--gold);
+    font-family:"Playfair Display",serif;font-weight:800;font-size:.95rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .rs-step.final .rs-dot{background:var(--gold);color:#fff;border-color:var(--gold)}
+  @media (prefers-color-scheme: dark){.rs-step.final .rs-dot{color:#14231d}}
+  .rs-step span{display:block;font-size:.72rem;line-height:1.25;color:var(--ink-faint);font-weight:600}
+  @media(max-width:560px){.rs-step span{font-size:.62rem}}
+
+  /* ---------- Cards & lists ---------- */
+  .card{background:var(--card);border:1px solid var(--line-soft);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .two-col{display:grid;gap:18px}
+  @media(min-width:760px){.two-col{grid-template-columns:1fr 1fr}}
+  ul.doc-list{list-style:none;margin:0;padding:0}
+  ul.doc-list li{padding:9px 0 9px 30px;position:relative;border-bottom:1px dashed var(--line-soft)}
+  ul.doc-list li:last-child{border-bottom:none}
+  ul.doc-list li::before{
+    content:"";position:absolute;left:2px;top:15px;width:11px;height:11px;border-radius:50%;
+    border:2px solid var(--gold);background:var(--paper);
+  }
+  ul.doc-list li strong{color:var(--ink)}
+  ul.doc-list li span{color:var(--ink-soft)}
+  .check-list{list-style:none;margin:0;padding:0}
+  .check-list li{padding:12px 0 12px 40px;position:relative;border-bottom:1px dashed var(--line-soft)}
+  .check-list li:last-child{border-bottom:none}
+  .check-list li::before{
+    content:"✓";position:absolute;left:0;top:9px;width:26px;height:26px;border-radius:50%;
+    background:var(--gold-soft);color:var(--gold);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.95rem;
+  }
+  .note-box{
+    background:var(--warn-bg);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 20px;margin-top:18px;
+  }
+  .note-box p:last-child{margin-bottom:0}
+
+  /* ---------- Route (Section 2) ---------- */
+  .route{position:relative;margin:26px 0 6px;padding-left:8px}
+  .route::before{
+    content:"";position:absolute;left:35px;top:18px;bottom:30px;
+    border-left:3px dashed var(--line);
+  }
+  .station{position:relative;display:flex;gap:18px;padding:0 0 30px}
+  .station:last-child{padding-bottom:4px}
+  .station-num{
+    flex:0 0 auto;width:56px;height:56px;border-radius:50%;z-index:1;
+    background:var(--card);border:2.5px solid var(--gold);color:var(--gold);
+    font-family:"Playfair Display",serif;font-weight:800;font-size:1.45rem;
+    display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);
+  }
+  .station-body{
+    flex:1;background:var(--card);border:1px solid var(--line-soft);border-radius:var(--radius);
+    padding:18px 20px;box-shadow:var(--shadow);
+  }
+  .station-body h3{margin-bottom:4px}
+  .station-body p{color:var(--ink-soft);margin-bottom:8px}
+  .station-body p:last-child{margin-bottom:0}
+  .fee{
+    display:inline-block;background:var(--gold-soft);color:var(--ink);
+    border-radius:999px;padding:2px 12px;font-size:.88rem;font-weight:700;margin:2px 4px 2px 0;
+  }
+  .fee b{color:var(--gold)}
+  @media (prefers-color-scheme: dark){.fee b{color:var(--gold-bright)}}
+  .station.final .station-num{background:var(--gold);border-color:var(--gold);color:#fff;width:64px;height:64px;margin-left:-4px}
+  @media (prefers-color-scheme: dark){.station.final .station-num{color:#14231d}}
+  .station.final .station-body{border:1.5px solid var(--gold)}
+  .seal-wrap{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .skip-tag{
+    display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:2px 10px;margin-left:8px;vertical-align:middle;
+  }
+
+  /* ---------- Prices table ---------- */
+  .price-hero-row{display:grid;gap:16px;margin-bottom:22px}
+  @media(min-width:700px){.price-hero-row{grid-template-columns:1fr 1fr}}
+  .ph-card{background:var(--accent-bg);color:var(--accent-ink);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .ph-card .n{font-family:"Playfair Display",serif;font-size:2.6rem;font-weight:800;line-height:1}
+  .ph-card .t{font-weight:700;margin-top:6px}
+  .ph-card .d{opacity:.85;font-size:.95rem}
+  .ph-card.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+  .ph-card.alt .d{color:var(--ink-soft);opacity:1}
+  table.compare{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  table.compare caption{text-align:left;font-family:"Playfair Display",serif;font-weight:700;font-size:1.15rem;padding:16px 18px 4px}
+  table.compare th,table.compare td{padding:13px 18px;text-align:left;vertical-align:top;border-top:1px solid var(--line-soft)}
+  table.compare thead th{border-top:none;background:var(--paper-2);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+  table.compare td.price{font-weight:800;white-space:nowrap;font-family:"Playfair Display",serif;font-size:1.12rem}
+  table.compare tr.us td{background:var(--gold-soft)}
+  table.compare tr.us td.price{color:var(--gold)}
+  @media (prefers-color-scheme: dark){table.compare tr.us td.price{color:var(--gold-bright)}}
+  .table-foot{font-size:.88rem;color:var(--ink-faint);margin-top:10px}
+  @media(max-width:640px){
+    table.compare thead{display:none}
+    table.compare,table.compare tbody,table.compare tr,table.compare td{display:block;width:100%}
+    table.compare tr{border-top:1px solid var(--line-soft);padding:8px 0}
+    table.compare td{border-top:none;padding:4px 18px}
+    table.compare td.price{padding-bottom:10px}
+    table.compare td::before{content:attr(data-l);display:block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+  }
+
+  /* ---------- Honest note / legal ---------- */
+  .honest{
+    border:2px solid var(--gold);border-radius:var(--radius);background:var(--card);
+    padding:26px;box-shadow:var(--shadow);margin-top:26px;
+  }
+  .honest h2{font-size:1.5rem}
+  .legal-quote{
+    font-family:"Source Serif 4",Georgia,serif;font-style:italic;
+    border-left:4px solid var(--gold);padding:6px 0 6px 16px;margin:14px 0;color:var(--ink);
+  }
+  .legal-quote .lang{display:block;font-family:"Source Sans 3",sans-serif;font-style:normal;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+
+  /* ---------- FAQ ---------- */
+  details.faq{
+    background:var(--card);border:1px solid var(--line-soft);border-radius:12px;
+    margin-bottom:10px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.faq summary{
+    cursor:pointer;padding:16px 20px;font-weight:700;font-size:1.05rem;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:52px;
+  }
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary::after{content:"+";font-family:"Playfair Display",serif;font-size:1.5rem;color:var(--gold);flex:0 0 auto;line-height:1}
+  details.faq[open ] summary::after{content:"–"}
+  details.faq .faq-body{padding:0 20px 18px;color:var(--ink-soft)}
+  details.faq .faq-body p:last-child{margin-bottom:0}
+  details.faq .faq-body strong{color:var(--ink)}
+
+  /* ---------- Form ---------- */
+  .form-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+  .form-grid{display:grid;gap:16px}
+  @media(min-width:700px){.form-grid{grid-template-columns:1fr 1fr}.form-grid .full{grid-column:1/-1}}
+  label{display:block;font-weight:700;font-size:.95rem;margin-bottom:6px}
+  label .req{color:var(--gold)}
+  input[type="text"],input[type="tel"],input[type="email"],select,textarea{
+    width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;
+    background:var(--field);color:var(--ink);font:inherit;font-size:1rem;min-height:48px;
+  }
+  textarea{min-height:110px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:3px solid var(--gold-soft);border-color:var(--gold)}
+  .form-alt{margin-top:16px;text-align:center;color:var(--ink-soft)}
+  .form-total{
+    background:var(--gold-soft);border-radius:10px;padding:12px 16px;font-size:.97rem;
+  }
+  .form-total strong{font-family:"Playfair Display",serif}
+
+  /* ---------- Footer ---------- */
+  footer{
+    margin-top:64px;border-top:3px double var(--line);padding:34px 0 44px;background:var(--paper-2);
+  }
+  footer .f-brand{font-family:"Playfair Display",serif;font-size:1.3rem;font-weight:800}
+  footer p{color:var(--ink-soft);font-size:.95rem;max-width:70ch}
+  footer .legal-en{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-size:.92rem}
+  footer a.tel{font-weight:700}
+  .back-top{display:inline-block;margin-top:8px;font-size:.9rem}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="shield" aria-hidden="true">
+        <svg width="76" height="88" viewBox="0 0 76 88" role="img" aria-label="Escudo OC · MD USA">
+          <path d="M38 2 L70 12 V42 C70 64 56 78 38 86 C20 78 6 64 6 42 V12 Z" fill="none" stroke="#a87f1f" stroke-width="3"/>
+          <path d="M38 8 L64 16.5 V42 C64 60.5 52.5 72.5 38 79.5 C23.5 72.5 12 60.5 12 42 V16.5 Z" fill="none" stroke="#a87f1f" stroke-width="1.2" opacity=".65"/>
+          <text x="38" y="40" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="800" font-size="21" fill="currentColor">OC</text>
+          <line x1="20" y1="49" x2="56" y2="49" stroke="#a87f1f" stroke-width="1.4"/>
+          <text x="38" y="63" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.5" fill="currentColor">MD · USA</text>
+        </svg>
+      </div>
+      <div class="brandline">
+        <strong>Consultoría Omar Cruz</strong>
+        <span>Gestión y logística de documentos · Hyattsville, Maryland</span>
+      </div>
+    </div>
+
+    <p class="kicker">Servicio de apostillas · Maryland</p>
+    <h1>Tu apostilla, sin perder un día <em>viajando a Annapolis</em></h1>
+
+    <div class="hero-grid">
+      <div>
+        <p class="bajada">La ventanilla del Secretary of State de Maryland atiende <strong>solo con cita</strong>, en horario reducido de <strong>9:00 a.&nbsp;m. a 1:00 p.&nbsp;m.</strong> Nosotros hacemos la ruta completa por ti: revisamos tu documento, lo llevamos por las oficinas que le tocan y te lo devolvemos con su apostilla puesta. Tú no pierdes el día de trabajo ni el viaje.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#solicitud">Empezar mi solicitud</a>
+          <a class="btn btn-ghost" href="tel:+12406590154">Llamar al 240-659-0154</a>
+        </div>
+      </div>
+      <div class="price-card" aria-label="Precio fijo publicado">
+        <p class="pc-label">Precio fijo publicado</p>
+        <div class="price-big">$125 <small>el primer documento</small></div>
+        <p class="price-plus"><strong>+$60</strong> cada documento adicional del mismo expediente</p>
+        <p class="price-note">Sin sorpresas: el precio es el mismo para todos y está publicado aquí. Las tarifas oficiales del estado (≈$15) van desglosadas y separadas de nuestro cobro por gestión.</p>
+      </div>
+    </div>
+
+    <nav class="route-strip" aria-label="Resumen de la ruta del documento">
+      <div class="rs-step"><div class="rs-dot">1</div><span>Tus manos</span></div>
+      <div class="rs-step"><div class="rs-dot">2</div><span>Revisión</span></div>
+      <div class="rs-step"><div class="rs-dot">3</div><span>Notario*</span></div>
+      <div class="rs-step"><div class="rs-dot">4</div><span>Clerk del condado</span></div>
+      <div class="rs-step"><div class="rs-dot">5</div><span>Secretary of State</span></div>
+      <div class="rs-step final"><div class="rs-dot">✓</div><span>De vuelta contigo</span></div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= 1. QUÉ ES ================= -->
+  <section id="que-es" aria-labelledby="h-que-es">
+    <p class="kicker">Primero, lo básico</p>
+    <h2 id="h-que-es">¿Qué es una apostilla? En palabras simples</h2>
+    <div class="two-col">
+      <div>
+        <p>Una apostilla es un <strong>sello oficial del Secretary of State de Maryland</strong> que se pone sobre tu documento. Ese sello certifica que la firma y el sello que ya trae el documento son auténticos, para que el documento <strong>sea aceptado como válido en los países que firmaron el Convenio de La Haya</strong>.</p>
+        <p>Sin ese sello, un acta de nacimiento, una sentencia de divorcio o una carta poder de Maryland pueden ser rechazados en el consulado o en la oficina del país donde necesitas hacer tu trámite.</p>
+      </div>
+      <div class="card">
+        <h3>Lo que hacemos — y lo que no</h3>
+        <p><strong>La Consultoría NO emite la apostilla.</strong> La apostilla la emite únicamente el Secretary of State de Maryland.</p>
+        <p style="margin-bottom:0">Lo que sí hacemos es la <strong>gestión completa</strong>: revisar que tu documento esté en el formato correcto, notarizarlo si es un documento privado, pasar por el Clerk del condado cuando corresponde y presentarlo ante el Secretary of State en Annapolis. Es un servicio privado de gestión y logística de documentos, sin afiliación con el estado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. LA RUTA ================= -->
+  <section id="ruta" aria-labelledby="h-ruta">
+    <p class="kicker">Así viaja tu papel</p>
+    <h2 id="h-ruta">La ruta de tu documento</h2>
+    <p class="lede">Cada documento recorre una ruta de oficinas, en orden. Si se salta un paso o llega en el formato equivocado, el Secretary of State lo devuelve y se empieza de nuevo. Por eso la revisión va primero.</p>
+
+    <div class="route">
+      <div class="station">
+        <div class="station-num" aria-hidden="true">1</div>
+        <div class="station-body">
+          <h3>Estación 1 · Tus manos</h3>
+          <p>Todo empieza contigo: nos entregas el documento original o su copia certificada. Si es un acta y no tienes la copia certificada en <strong>formato largo (long form)</strong>, se pide primero en Vital Records.</p>
+          <span class="fee">Copia certificada en Vital Records: <b>$10</b> tarifa oficial</span>
+        </div>
+      </div>
+
+      <div class="station">
+        <div class="station-num" aria-hidden="true">2</div>
+        <div class="station-body">
+          <h3>Estación 2 · Revisión en la Consultoría</h3>
+          <p>Revisamos que el documento sea el correcto para el país y el trámite de destino: formato largo en las actas, sello y firma del funcionario en los documentos públicos, y que el documento privado esté listo para notarizar. Detectar un error aquí ahorra un viaje perdido a Annapolis.</p>
+        </div>
+      </div>
+
+      <div class="station">
+        <div class="station-num" aria-hidden="true">3</div>
+        <div class="station-body">
+          <h3>Estación 3 · Notarización <span class="skip-tag">Solo documentos privados</span></h3>
+          <p>Las cartas poder, declaraciones juradas (affidávits) y diplomas sellados son documentos privados: antes de poder apostillarse, el firmante debe firmar ante notario. Los documentos públicos de Maryland se saltan esta estación.</p>
+          <span class="fee">Acto notarial: <b>$8</b> tarifa regulada por el estado</span>
+        </div>
+      </div>
+
+      <div class="station">
+        <div class="station-num" aria-hidden="true">4</div>
+        <div class="station-body">
+          <h3>Estación 4 · Clerk of the Circuit Court del condado</h3>
+          <p>Si el documento pasó por notario, el Clerk de la corte del condado certifica que ese notario tiene su comisión vigente en Maryland. Sin esa certificación, el Secretary of State no acepta el documento notarizado.</p>
+          <span class="fee">Certificación del Clerk: <b>≈$1</b> por documento</span>
+        </div>
+      </div>
+
+      <div class="station">
+        <div class="station-num" aria-hidden="true">5</div>
+        <div class="station-body">
+          <h3>Estación 5 · Secretary of State, en Annapolis</h3>
+          <p>La última oficina: el Secretary of State verifica la cadena completa de firmas y sellos y coloca la apostilla sobre tu documento. Su ventanilla atiende <strong>solo con cita, de 9:00 a.&nbsp;m. a 1:00 p.&nbsp;m.</strong>, con un límite de <strong>10 documentos por cliente al día</strong>.</p>
+          <span class="fee">Apostilla del SOS: <b>$5</b> por documento</span>
+        </div>
+      </div>
+
+      <div class="station final">
+        <div class="station-num" aria-hidden="true">✓</div>
+        <div class="station-body">
+          <div class="seal-wrap">
+            <svg width="58" height="58" viewBox="0 0 58 58" aria-hidden="true">
+              <circle cx="29" cy="29" r="26" fill="none" stroke="#a87f1f" stroke-width="2.5"/>
+              <circle cx="29" cy="29" r="20.5" fill="none" stroke="#a87f1f" stroke-width="1" stroke-dasharray="3 3"/>
+              <path d="M29 15 l3.4 7 7.7 1.1 -5.6 5.4 1.3 7.6 -6.8 -3.6 -6.8 3.6 1.3 -7.6 -5.6 -5.4 7.7 -1.1 Z" fill="#a87f1f"/>
+            </svg>
+            <div style="flex:1;min-width:220px">
+              <h3>Estación final · De vuelta en tus manos, con su apostilla</h3>
+              <p style="margin-bottom:0">Tu documento regresa a ti con el sello dorado del Secretary of State puesto: listo para presentarlo en el consulado o en la oficina de tu país.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box" role="note">
+      <h3>Atajo para documentos públicos de Maryland</h3>
+      <p>Las actas de nacimiento, matrimonio y defunción, y las sentencias de divorcio de Maryland, ya traen el sello y la firma del funcionario que las emitió. Esos documentos van <strong>directos al Secretary of State</strong>: se saltan la notarización (Estación 3) y el Clerk del condado (Estación 4).</p>
+    </div>
+  </section>
+
+  <!-- ================= 3. DOCUMENTOS ================= -->
+  <section id="documentos" aria-labelledby="h-documentos">
+    <p class="kicker">Lo que más nos traen</p>
+    <h2 id="h-documentos">Qué documentos se apostillan — y para qué</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>Documentos típicos</h3>
+        <ul class="doc-list">
+          <li><strong>Actas de nacimiento de EE. UU.</strong> <span>— en formato largo (long form)</span></li>
+          <li><strong>Actas de matrimonio y de defunción</strong></li>
+          <li><strong>Sentencias de divorcio</strong> <span>de Maryland</span></li>
+          <li><strong>Cartas poder y affidávits</strong> <span>(documentos privados, notarizados)</span></li>
+          <li><strong>Diplomas y transcripts</strong> <span>sellados por la institución</span></li>
+          <li><strong>Récords policiales</strong> <span>de Maryland</span></li>
+          <li><strong>Certificados de good standing</strong></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Trámites para los que se pide</h3>
+        <ul class="doc-list">
+          <li><strong>Registro de doble ciudadanía</strong> <span>de hijos nacidos en EE. UU. — Honduras la exige sin importar la edad del hijo; también la piden República Dominicana y Colombia</span></li>
+          <li><strong>Trámites de familia</strong> <span>en el país de origen</span></li>
+          <li><strong>Poderes y herencias</strong></li>
+          <li><strong>Divorcios</strong> <span>y sus efectos en otro país</span></li>
+          <li><strong>Estudios</strong> <span>— validar diplomas y récords académicos</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="note-box" role="note">
+      <p><strong>Ojo:</strong> la apostilla solo funciona en países firmantes del Convenio de La Haya. Si tu país no es firmante, tu documento lleva <strong>legalización</strong>, que es un proceso distinto. Cuéntanos el país de destino en la solicitud y te confirmamos cuál proceso le toca a tu documento.</p>
+    </div>
+  </section>
+
+  <!-- ================= 4. PRECIOS ================= -->
+  <section id="precios" aria-labelledby="h-precios">
+    <p class="kicker">Sin letra pequeña</p>
+    <h2 id="h-precios">Precios — publicados</h2>
+    <div class="price-hero-row">
+      <div class="ph-card">
+        <div class="n">$125</div>
+        <p class="t">El primer documento</p>
+        <p class="d">Gestión completa de la ruta: revisión, notarización si aplica, Clerk si aplica y presentación ante el Secretary of State.</p>
+      </div>
+      <div class="ph-card alt">
+        <div class="n">$60</div>
+        <p class="t">Cada documento adicional</p>
+        <p class="d">Cuando va en el mismo expediente — por ejemplo, las actas de varios hijos para un mismo trámite de familia.</p>
+      </div>
+    </div>
+
+    <table class="compare" aria-label="Comparación honesta de precios de apostilla en el área">
+      <caption>La comparación honesta</caption>
+      <thead>
+        <tr><th scope="col">Opción</th><th scope="col">Primer documento</th><th scope="col">Lo que implica</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-l="Opción"><strong>Hacerlo usted mismo</strong></td>
+          <td class="price" data-l="Primer documento">≈$15</td>
+          <td data-l="Lo que implica">Solo las tarifas oficiales (SOS $5 + Clerk ≈$1 + acta $10). Es un trámite público — pero le cuesta el día de viaje a Annapolis, con cita y ventanilla de 9 a 1.</td>
+        </tr>
+        <tr>
+          <td data-l="Opción"><strong>Gestores del área</strong> (Alliance Notary, The Notary Seal)</td>
+          <td class="price" data-l="Primer documento">$135–$150</td>
+          <td data-l="Lo que implica">Gestores locales de Maryland con precio publicado.</td>
+        </tr>
+        <tr>
+          <td data-l="Opción"><strong>Gestora en español del DMV</strong> (On Demand Dox)</td>
+          <td class="price" data-l="Primer documento">$160–$175</td>
+          <td data-l="Lo que implica">Atención en español en el área del DMV.</td>
+        </tr>
+        <tr>
+          <td data-l="Opción"><strong>Gestores premium</strong> (Gold Coast Notary, Fingerscan)</td>
+          <td class="price" data-l="Primer documento">$400–$450</td>
+          <td data-l="Lo que implica">Servicios premium con tarifas publicadas en ese rango.</td>
+        </tr>
+        <tr class="us">
+          <td data-l="Opción"><strong>Consultoría Omar Cruz</strong> — Apostillas MD</td>
+          <td class="price" data-l="Primer documento">$125 + $60</td>
+          <td data-l="Lo que implica">$125 el primer documento y $60 cada adicional del mismo expediente. Atención en español, en Hyattsville.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="table-foot">Precios de la competencia verificados en sus páginas públicas el 21 de noviembre de 2026. Las tarifas oficiales del estado (≈$15) se pagan al estado y van desglosadas, separadas de nuestro cobro por gestión.</p>
+  </section>
+
+  <!-- ================= 5. QUÉ TRAER ================= -->
+  <section id="traer" aria-labelledby="h-traer">
+    <p class="kicker">Antes de venir</p>
+    <h2 id="h-traer">Qué debes traer</h2>
+    <div class="card">
+      <ul class="check-list">
+        <li><strong>El documento original o su copia certificada.</strong> En las actas, debe ser el formato largo (long form). Si no la tienes, la pedimos en Vital Records: <strong>$10</strong> de tarifa oficial.</li>
+        <li><strong>Tu identificación con foto</strong> vigente.</li>
+        <li><strong>El país y el trámite de destino</strong> — dónde se va a usar el documento y para qué, para confirmar que la apostilla es el proceso correcto.</li>
+        <li><strong>Si es un documento privado sin notarizar</strong> (carta poder, affidávit): el firmante debe estar presente con su identificación. El acto notarial cuesta <strong>$8</strong>, tarifa regulada por el estado.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 6. TIEMPOS ================= -->
+  <section id="tiempos" aria-labelledby="h-tiempos">
+    <p class="kicker">Lo que depende del estado</p>
+    <h2 id="h-tiempos">Tiempos</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>Por ventanilla, en Annapolis</h3>
+        <p>La ventanilla del Secretary of State atiende <strong>solo con cita, de 9:00 a.&nbsp;m. a 1:00 p.&nbsp;m.</strong>, con un límite de <strong>10 documentos por cliente al día</strong>. Nuestra gestión se agenda dentro de esas reglas.</p>
+      </div>
+      <div class="card">
+        <h3>Por correo</h3>
+        <p>Cuando el trámite va por correo, el propio Secretary of State reporta un proceso de <strong>7 a 14 días hábiles</strong>.</p>
+      </div>
+    </div>
+    <div class="note-box" role="note">
+      <p><strong>Lo decimos claro:</strong> nadie puede garantizar una fecha del estado. Los tiempos de ventanilla y de correo los controla el Secretary of State, no nosotros. Lo que sí controlamos — y sí te confirmamos — es cuándo sale tu documento de nuestras manos hacia cada estación de la ruta.</p>
+    </div>
+  </section>
+
+  <!-- ================= NOTA HONESTA + AVISO LEGAL ================= -->
+  <section id="aviso" aria-labelledby="h-aviso">
+    <div class="honest">
+      <p class="kicker">Nota honesta</p>
+      <h2 id="h-aviso">Quiénes somos — y quiénes no</h2>
+      <p>Este es un <strong>servicio privado de gestión y logística de documentos</strong>. La apostilla la emite <strong>únicamente el Secretary of State de Maryland</strong>; no tenemos afiliación con esa oficina ni con ninguna agencia del estado. <strong>Omar Cruz no es abogado.</strong> Las tarifas oficiales del estado (≈$15) van desglosadas y separadas de nuestro cobro por gestión, y <strong>no garantizamos los tiempos del estado</strong>.</p>
+      <p style="margin-bottom:6px">Aviso legal de Maryland para servicios notariales (State Government § 18-224):</p>
+      <blockquote class="legal-quote" lang="en">
+        <span class="lang">English — § 18-224 notice</span>
+        “I am not an attorney licensed to practice law in this State. I am not allowed to draft legal records, give advice on legal matters, including immigration, or charge a fee for those activities.”
+      </blockquote>
+      <blockquote class="legal-quote" lang="es">
+        <span class="lang">Español — traducción del aviso</span>
+        «No soy un abogado con licencia para ejercer el derecho en este Estado. No se me permite redactar documentos legales, dar consejos sobre asuntos legales, incluyendo inmigración, ni cobrar una tarifa por esas actividades.»
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ================= 7. FAQ ================= -->
+  <section id="faq" aria-labelledby="h-faq">
+    <p class="kicker">Preguntas comunes</p>
+    <h2 id="h-faq">Preguntas frecuentes</h2>
+
+    <details class="faq">
+      <summary>¿Por qué cobran $125 si el estado cobra como $15?</summary>
+      <div class="faq-body">
+        <p>Porque son dos cosas distintas. Los ≈$15 son las <strong>tarifas oficiales del estado</strong> (SOS $5, Clerk ≈$1, copia certificada $10) y se pagan al estado. Los $125 son nuestro <strong>cobro por la gestión</strong>: revisar tu documento, hacer la ruta completa por las oficinas y ahorrarte el día de viaje a Annapolis. Usted paga la gestión, no el sello — el sello lo pone el estado.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Cuánto tarda mi apostilla?</summary>
+      <div class="faq-body">
+        <p>Depende del estado, no de nosotros. La ventanilla del Secretary of State atiende con cita de 9:00 a.&nbsp;m. a 1:00 p.&nbsp;m. (límite de 10 documentos por cliente al día), y por correo el estado reporta de 7 a 14 días hábiles. <strong>No prometemos una fecha exacta</strong>, porque nadie puede garantizar una fecha del estado.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Tengo el acta de nacimiento corta (short form). ¿Sirve?</summary>
+      <div class="faq-body">
+        <p><strong>No.</strong> Para apostillar se necesita el acta en <strong>formato largo (long form)</strong>. Si solo tienes la corta, pedimos la copia certificada larga en Vital Records: la tarifa oficial es de <strong>$10</strong>.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Ustedes emiten la apostilla?</summary>
+      <div class="faq-body">
+        <p><strong>No.</strong> La apostilla la emite <strong>únicamente el Secretary of State de Maryland</strong>. Nosotros hacemos la gestión: preparamos tu documento y lo llevamos por toda la ruta hasta esa oficina. Somos un servicio privado, sin afiliación con el estado.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Necesito apostillar las actas de mis tres hijos. ¿Cuánto es?</summary>
+      <div class="faq-body">
+        <p>Van en un mismo expediente, así que aplica el precio de adicionales: <strong>$125 + $60 + $60 = $245</strong> por la gestión de las tres actas.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Mi documento es federal, de antecedentes del FBI. ¿También lo hacen?</summary>
+      <div class="faq-body">
+        <p>Los documentos federales — como los antecedentes del FBI — <strong>no van al Secretary of State de Maryland</strong>. Se apostillan ante el Departamento de Estado federal, que es otra ruta, y <strong>se cotizan aparte</strong>. Escríbenos en la solicitud y te orientamos sobre ese proceso.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿También traducen el documento?</summary>
+      <div class="faq-body">
+        <p>Sí, la <strong>traducción certificada</strong> está disponible como servicio aparte. Tenlo en cuenta: países como <strong>República Dominicana y Colombia</strong> piden el acta <strong>apostillada y traducida</strong>, así que conviene hacer ambos pasos en el mismo expediente.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Puedo hacer la apostilla yo mismo?</summary>
+      <div class="faq-body">
+        <p><strong>Sí.</strong> Es un trámite público y las tarifas oficiales suman ≈$15. Lo que te cuesta es el tiempo: pedir la cita, viajar a Annapolis y moverte dentro del horario de ventanilla de 9:00 a.&nbsp;m. a 1:00 p.&nbsp;m. Nuestro servicio existe para quien prefiere no perder ese día.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ================= 8. FORMULARIO ================= -->
+  <section id="solicitud" aria-labelledby="h-solicitud">
+    <p class="kicker">Da el primer paso</p>
+    <h2 id="h-solicitud">Envía tu solicitud</h2>
+    <p class="lede">Llena el formulario y tu solicitud llega directo a nuestro correo. Te contactamos para confirmar los detalles de tu expediente antes de que tu documento empiece la ruta.</p>
+
+    <div class="form-card">
+      <form action="https://formsubmit.co/leydelswing@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nueva solicitud — Apostillas MD Sin Viaje a Annapolis" />
+        <input type="hidden" name="_cc" value="swingbravo@gmail.com" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+
+        <div class="form-grid">
+          <div>
+            <label for="f-nombre">Nombre completo <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="f-nombre" name="Nombre completo" autocomplete="name" required />
+          </div>
+          <div>
+            <label for="f-telefono">Teléfono <span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="f-telefono" name="Teléfono" autocomplete="tel" required />
+          </div>
+          <div class="full">
+            <label for="f-correo">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="f-correo" name="Correo electrónico" autocomplete="email" required />
+          </div>
+          <div>
+            <label for="f-tipo">Tipo de documento <span class="req" aria-hidden="true">*</span></label>
+            <select id="f-tipo" name="Tipo de documento" required>
+              <option value="" selected disabled>Selecciona una opción</option>
+              <option>Acta de nacimiento</option>
+              <option>Acta de matrimonio</option>
+              <option>Acta de defunción</option>
+              <option>Sentencia de divorcio</option>
+              <option>Carta poder</option>
+              <option>Diploma / récord académico</option>
+              <option>Antecedentes / récord policial</option>
+              <option>Otro documento</option>
+            </select>
+          </div>
+          <div>
+            <label for="f-pais">País donde se va a usar <span class="req" aria-hidden="true">*</span></label>
+            <select id="f-pais" name="País donde se va a usar" required>
+              <option value="" selected disabled>Selecciona una opción</option>
+              <option>Honduras</option>
+              <option>República Dominicana</option>
+              <option>Colombia</option>
+              <option>El Salvador</option>
+              <option>Guatemala</option>
+              <option>México</option>
+              <option>Perú</option>
+              <option>Otro país</option>
+            </select>
+          </div>
+          <div>
+            <label for="f-cantidad">Cantidad de documentos <span class="req" aria-hidden="true">*</span></label>
+            <select id="f-cantidad" name="Cantidad de documentos" required>
+              <option value="" selected disabled>Selecciona una opción</option>
+              <option>1 documento — $125</option>
+              <option>2 documentos — $185</option>
+              <option>3 documentos — $245</option>
+              <option>4 o más documentos</option>
+            </select>
+          </div>
+          <div>
+            <label for="f-tiene">¿Ya tiene el documento? <span class="req" aria-hidden="true">*</span></label>
+            <select id="f-tiene" name="¿Ya tiene el documento?" required>
+              <option value="" selected disabled>Selecciona una opción</option>
+              <option>Sí, tengo el original o la copia certificada</option>
+              <option>Tengo una copia simple o no estoy seguro</option>
+              <option>No, necesito que pidan la copia certificada</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="f-mensaje">Mensaje (opcional)</label>
+            <textarea id="f-mensaje" name="Mensaje" placeholder="Cuéntanos para qué trámite es, para cuándo lo necesitas o cualquier duda que tengas."></textarea>
+          </div>
+          <div class="full form-total" role="note">
+            Precio de gestión publicado: <strong>$125</strong> el primer documento y <strong>$60</strong> cada adicional del mismo expediente. Las tarifas oficiales del estado (≈$15) se pagan por separado y van desglosadas.
+          </div>
+          <div class="full">
+            <button type="submit" class="btn btn-primary" style="width:100%">Enviar mi solicitud</button>
+          </div>
+        </div>
+      </form>
+      <p class="form-alt">¿Prefieres hablar primero? Llámanos al <a class="phone-big" href="tel:+12406590154" style="font-size:1.15rem">240-659-0154</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= PIE ================= -->
+<footer>
+  <div class="wrap">
+    <div class="hero-top" style="margin-bottom:14px">
+      <div class="shield" aria-hidden="true">
+        <svg width="52" height="60" viewBox="0 0 76 88" role="img" aria-label="Escudo OC · MD USA">
+          <path d="M38 2 L70 12 V42 C70 64 56 78 38 86 C20 78 6 64 6 42 V12 Z" fill="none" stroke="#a87f1f" stroke-width="3"/>
+          <text x="38" y="40" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="800" font-size="21" fill="currentColor">OC</text>
+          <line x1="20" y1="49" x2="56" y2="49" stroke="#a87f1f" stroke-width="1.4"/>
+          <text x="38" y="63" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.5" fill="currentColor">MD · USA</text>
+        </svg>
+      </div>
+      <div>
+        <div class="f-brand">Consultoría Omar Cruz</div>
+        <div style="color:var(--ink-faint)">Gestión y logística de documentos · Hyattsville, MD</div>
+      </div>
+    </div>
+    <p>Servicio privado de gestión de apostillas. <strong>Sin afiliación con el Secretary of State de Maryland</strong>: la apostilla la emite únicamente esa oficina del estado. Teléfono: <a class="tel" href="tel:+12406590154">240-659-0154</a>.</p>
+    <p class="legal-en" lang="en">Maryland notice (§ 18-224): “I am not an attorney licensed to practice law in this State. I am not allowed to draft legal records, give advice on legal matters, including immigration, or charge a fee for those activities.”</p>
+    <a class="back-top" href="#inicio">↑ Volver arriba</a>
+  </div>
+</footer>
+
+</body>
+</html>
